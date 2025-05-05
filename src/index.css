@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary-accent: oklch(0.74 0.1395 146.97);
+  --color-secondary-accent: oklch(0.7 0.1692 136.72);
+  --color-tertiary-accent: oklch(0.71 0.1201 178.09);
 
-    --color-primary-accent: "#68c174";
-    --color-secondary-accent: "#68b541";
-    --color-tertiary-accent: "#2db9a1";
+  --color-altwhite: oklch(0.99 0 0);
+  --color-altgray: oklch(0.96 0.0029 264.54);
+  --color-altblack: oklch(0.35 0.0133 248.21);
 
-    --color-white: "#fbfbfb";
-    --color-gray: "#f0f1f3";
-    --color-black: "#343a40";
+  --gradient-accent: linear-gradient(
+    to bottom right,
+    var(--color-secondary-accent),
+    var(--color-tertiary-accent)
+  );
 
-    --gradient-accent: linear-gradient(to bottom right, var(--color-secondary-accent), var(--color-tertiary-accent));
+  --font-poppins: "Poppins", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
+}
 
-    --font-poppins: "Poppins", sans-serif;
-    --font-playfair: "Playfair Display", serif;
-    --font-ubuntu: "Ubuntu", sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-altwhite);
 }

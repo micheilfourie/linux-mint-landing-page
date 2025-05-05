@@ -1,8 +1,12 @@
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <>
+      <Hero />
+      <Features />
+    </>
   );
 };
 
