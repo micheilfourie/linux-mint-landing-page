@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+
+    --color-primary-accent: "#68c174";
+    --color-secondary-accent: "#68b541";
+    --color-tertiary-accent: "#2db9a1";
+
+    --color-white: "#fbfbfb";
+    --color-gray: "#f0f1f3";
+    --color-black: "#343a40";
+
+    --gradient-accent: linear-gradient(to bottom right, var(--color-secondary-accent), var(--color-tertiary-accent));
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-playfair: "Playfair Display", serif;
+    --font-ubuntu: "Ubuntu", sans-serif;
+}
