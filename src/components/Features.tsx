@@ -43,14 +43,14 @@ const cardContentList: CardContentType[] = [
 const Features = () => {
   return (
     <section className="mx-auto mt-16 grid max-w-[1200px] grid-cols-[1fr_1fr_1fr] gap-[30px] px-10">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <h5 className="text-primary-accent font-poppins text-xl font-[500]">
           Features
         </h5>
         <h2 className="text-altblack font-poppins text-4xl font-[500]">
           What is Linux Mint?
         </h2>
-        <p className="font-ubuntu text-altblack text-[15px] font-light">
+        <p className="font-ubuntu text-altblack text-[15px] font-light mb-6">
           Linux Mint is an operating system for desktop and laptop computers. It
           is designed to work 'out of the box' and comes fully equipped with the
           apps most people need.

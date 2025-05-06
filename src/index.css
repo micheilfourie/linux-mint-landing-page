@@ -9,12 +9,6 @@
   --color-altgray: oklch(0.96 0.0029 264.54);
   --color-altblack: oklch(0.35 0.0133 248.21);
 
-  --gradient-accent: linear-gradient(
-    to bottom right,
-    var(--color-secondary-accent),
-    var(--color-tertiary-accent)
-  );
-
   --font-poppins: "Poppins", sans-serif;
   --font-playfair: "Playfair Display", serif;
   --font-ubuntu: "Ubuntu", sans-serif;
