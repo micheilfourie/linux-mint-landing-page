@@ -1,11 +1,13 @@
 import Header from "./Header";
 import HeroImg from "../assets/devices.png";
 import Button from "./Button";
+import Pattern from "../assets/pattern.png";
+
 const Hero = () => {
   return (
     <section className="from-secondary-accent to-tertiary-accent relative h-[700px] bg-gradient-to-br">
       <img
-        src="https://linuxmint.com/web/wizixo/template/assets/images/bg/pattern/02.png"
+        src={Pattern}
         alt=""
         className="pointer-events-none absolute top-0 h-full w-full object-cover"
       />
@@ -33,7 +35,7 @@ const Hero = () => {
           </p>
           <div className="mt-6 flex gap-5">
             <Button>Download</Button>
-            <Button buttonType="secondary">Installation Instructions</Button>
+            <Button buttonType="secondary" link="https://linuxmint-installation-guide.readthedocs.io/en/latest/">Installation Instructions</Button>
           </div>
         </div>
         <div>

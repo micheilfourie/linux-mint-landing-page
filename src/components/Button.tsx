@@ -1,9 +1,11 @@
 type ButtonProps = {
+  action?: () => void;
+  link?: string;
   buttonType?: "primary" | "secondary" | "tertiary";
   children: React.ReactNode;
 };
 
-const Button = ({ buttonType, children }: ButtonProps) => {
+const Button = ({ action, link, buttonType, children }: ButtonProps) => {
   const isPrimary = buttonType === "primary";
   const isSecondary = buttonType === "secondary";
   const isTertiary = buttonType === "tertiary";
@@ -17,12 +19,22 @@ const Button = ({ buttonType, children }: ButtonProps) => {
   const defaulStyle =
     "bg-altwhite text-altblack hover:bg-altgray text-[15px] px-[18px] py-[9px]";
 
-  return (
-    <button
-      className={`${isPrimary && primaryStyle} ${isSecondary && secondaryStyle} ${isTertiary && tertiaryStyle} ${!isPrimary && !isSecondary && !isTertiary && defaulStyle} font-ubuntu cursor-pointer rounded text-nowrap transition-all duration-300 ease-in-out`}
-    >
+  const classNames = `
+    ${isPrimary ? primaryStyle : ""} 
+    ${isSecondary ? secondaryStyle : ""} 
+    ${isTertiary ? tertiaryStyle : ""} 
+    ${!isPrimary && !isSecondary && !isTertiary ? defaulStyle : ""} 
+    font-ubuntu cursor-pointer rounded text-nowrap transition-all duration-300 ease-in-out
+  `;
+
+  return action ? (
+    <button onClick={action} className={classNames}>
       {children}
     </button>
+  ) : (
+    <a href={link} className={classNames}>
+      {children}
+    </a>
   );
 };
 

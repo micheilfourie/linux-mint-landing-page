@@ -1,9 +1,9 @@
-import WandSvg from "../assets/wand.svg";
-import HeartSvg from "../assets/heart.svg";
-import CrownSvg from "../assets/crown.svg";
-import LockSvg from "../assets/lock.svg";
-import CheckBoxSvg from "../assets/check-box.svg";
-import FaceSmileSvg from "../assets/face-smile.svg";
+import WandSvg from "../assets/svg/wand.svg";
+import HeartSvg from "../assets/svg/heart.svg";
+import CrownSvg from "../assets/svg/crown.svg";
+import LockSvg from "../assets/svg/lock.svg";
+import CheckBoxSvg from "../assets/svg/check-box.svg";
+import FaceSmileSvg from "../assets/svg/face-smile.svg";
 
 type ProductInfoType = {
     icon: string;

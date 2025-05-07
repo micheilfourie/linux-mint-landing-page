@@ -1,8 +1,8 @@
-import PencilAltSvg from "../assets/pencil-alt.svg";
-import ControllerSvg from "../assets/controller.svg";
-import RulerPencilSvg from "../assets/ruler-pencil.svg";
-import GlobeSvg from "../assets/globe.svg";
-import VideoClapperSvg from "../assets/video-clapper.svg";
+import PencilAltSvg from "../assets/svg/pencil-alt.svg";
+import ControllerSvg from "../assets/svg/controller.svg";
+import RulerPencilSvg from "../assets/svg/ruler-pencil.svg";
+import GlobeSvg from "../assets/svg/globe.svg";
+import VideoClapperSvg from "../assets/svg/video-clapper.svg";
 import { CardContentType } from "../lib/types";
 import FeatureCardMap from "./FeatureCardMap";
 
@@ -42,7 +42,7 @@ const cardContentList: CardContentType[] = [
 
 const Features = () => {
   return (
-    <section className="mx-auto mt-16 grid max-w-[1200px] grid-cols-[1fr_1fr_1fr] gap-[30px] px-10">
+    <section className="mx-auto mt-16 grid max-w-[1200px] grid-cols-[1fr_1fr_1fr] gap-[30px] px-10 mb-20">
       <div className="flex flex-col gap-2">
         <h5 className="text-primary-accent font-poppins text-xl font-[500]">
           Features
