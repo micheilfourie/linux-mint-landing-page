@@ -70,7 +70,7 @@ const Partners = () => {
         </div>
 
         {partnerList.map((item, index) => (
-          <a href={item.link} target="_blank">
+          <a key={index} href={item.link} target="_blank">
             <img key={index} src={item.img} alt="" className="" />
           </a>
         ))}
