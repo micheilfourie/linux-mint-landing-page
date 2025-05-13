@@ -11,17 +11,17 @@ import FixedNav from "../components/FixedNav";
 import ScrollTopButton from "../components/ScrollTopButton";
 
 const Home = ({
-  scrollPos,
+  isThresholdAchieved,
   handleScrollToTop,
 }: {
-  scrollPos: number;
+  isThresholdAchieved: boolean;
   handleScrollToTop: () => void;
 }) => {
   return (
     <>
-      <FixedNav scrollPos={scrollPos} />
+      <FixedNav isThresholdAchieved={isThresholdAchieved} />
       <ScrollTopButton
-        scrollPos={scrollPos}
+        isThresholdAchieved={isThresholdAchieved}
         handleScrollToTop={handleScrollToTop}
       />
       

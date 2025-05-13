@@ -71,7 +71,7 @@ const Partners = () => {
 
         {partnerList.map((item, index) => (
           <a key={index} href={item.link} target="_blank">
-            <img key={index} src={item.img} alt="" className="" />
+            <img src={item.img} alt="" />
           </a>
         ))}
       </div>

@@ -2,6 +2,7 @@ import Header from "./Header";
 import HeroImg from "../assets/devices.png";
 import Button from "./Button";
 import Pattern from "../assets/pattern.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -34,8 +35,14 @@ const Hero = () => {
             it on your computer today!
           </p>
           <div className="mt-6 flex gap-5">
-            <Button>Download</Button>
-            <Button buttonType="secondary" link="https://linuxmint-installation-guide.readthedocs.io/en/latest/">Installation Instructions</Button>
+            <Link to="/download">
+              <Button>Download</Button>
+            </Link>
+
+            <a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/">
+              <Button buttonType="secondary">Installation Instructions</Button>
+            </a>
+            
           </div>
         </div>
         <div>

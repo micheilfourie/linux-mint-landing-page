@@ -23,25 +23,28 @@ import Tag from "./Tag";
 const LinksDropdown = ({ navDropdownOpen }: { navDropdownOpen: string }) => {
   return (
     <div
-      className={`bg-altwhite absolute top-[77px] right-0 shadow-sm ${navDropdownOpen === "links" ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none translate-y-20 opacity-0"} flex w-[600px] flex-col gap-2 transition-all duration-400 ease-in-out`}
+      className={`bg-altwhite absolute top-[77px] cursor-default right-0 shadow-sm ${navDropdownOpen === "links" ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none translate-y-20 opacity-0"} flex w-[600px] flex-col gap-2 transition-all duration-400 ease-in-out`}
     >
       <div className="text-altblack flex gap-20 p-6">
         <div className="flex flex-col gap-4">
           <h6 className="font-poppins font-[500]">Official</h6>
           <ul className="font-ubuntu nowrap flex flex-col gap-2 text-[15px] font-light">
             <li className="nowrap flex gap-4">
-              <span><FontAwesomeIcon icon={faIgloo} /> Website</span> <Tag>Here</Tag>
+              <span className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
+                <FontAwesomeIcon icon={faIgloo} /> Website
+              </span>{" "}
+              <Tag>Here</Tag>
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faBlog} /> Blog
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faComments} /> Forums
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faComment} /> Chat Rooms
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faUsers} /> Community Website
             </li>
           </ul>
@@ -50,16 +53,16 @@ const LinksDropdown = ({ navDropdownOpen }: { navDropdownOpen: string }) => {
         <div className="flex flex-col gap-4">
           <h6 className="font-poppins font-[500]">Social</h6>
           <ul className="font-ubuntu nowrap flex flex-col gap-2 text-[15px] font-light">
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faGithub} /> Github
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faFacebook} /> Facebook
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faTwitter} /> Twitter
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faMastodon} /> Mastodon
             </li>
           </ul>
@@ -68,19 +71,19 @@ const LinksDropdown = ({ navDropdownOpen }: { navDropdownOpen: string }) => {
         <div className="flex flex-col gap-4">
           <h6 className="font-poppins font-[500]">Community</h6>
           <ul className="font-ubuntu nowrap flex flex-col gap-2 text-[15px] font-light">
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faReddit} /> Reddit
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faDiscord} /> Discord
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faHashtag} /> IRC
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faPodcast} /> MintCast Podcast
             </li>
-            <li>
+            <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
               <FontAwesomeIcon icon={faGlobe} /> Local Communities
             </li>
           </ul>

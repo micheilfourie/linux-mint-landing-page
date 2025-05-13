@@ -1,4 +1,6 @@
 import Logo from "../assets/logo.svg";
+import FooterBanner from "./FooterBanner";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   {
@@ -60,12 +62,17 @@ const linkGoups = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ bannerGroup }: { bannerGroup: number }) => {
   return (
-    <footer className="bg-altblack flex flex-col gap-10 pt-20 pb-10 text-gray-300">
-      <div className="mx-auto flex flex-wrap gap-10 px-10">
+    <footer className="bg-altblack flex flex-col gap-10 py-10 text-gray-300">
+      {bannerGroup !== undefined  && <FooterBanner bannerGroup={bannerGroup}/>}
+
+      <div className="mx-auto flex flex-wrap gap-10 px-10 pt-10">
         <div className="flex max-w-[300px] flex-col gap-4">
-          <img src={Logo} alt="" className="w-[200px]" />
+          <Link to={"/"}>
+            <img src={Logo} alt="" className="w-[200px]" />
+          </Link>
+
           <p>
             Thanks to your donations and advertising Linux Mint is completely
             free of charge. We hope you'll enjoy using it as much as we enjoy
