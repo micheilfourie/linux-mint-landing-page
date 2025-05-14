@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Download from "./pages/Download";
 import ScrollToTop from "./components/ScrollToTop";
+import NewFeatures from "./pages/NewFeatures";
+import RouteTitleSetter from "./components/RouteTitleSetter";
 
 function App() {
   const [isThresholdAchieved, setIsthresholdAchieved] = useState(false);
@@ -29,7 +31,9 @@ function App() {
 
   return (
     <>
+      <RouteTitleSetter />
       <ScrollToTop />
+      
       <Routes>
         <Route
           path="/"
@@ -44,6 +48,15 @@ function App() {
           path="/download"
           element={
             <Download
+              isThresholdAchieved={isThresholdAchieved}
+              handleScrollToTop={handleScrollToTop}
+            />
+          }
+        />
+        <Route
+          path="/new-features"
+          element={
+            <NewFeatures
               isThresholdAchieved={isThresholdAchieved}
               handleScrollToTop={handleScrollToTop}
             />

@@ -62,7 +62,7 @@ const linkGoups = [
   },
 ];
 
-const Footer = ({ bannerGroup }: { bannerGroup: number }) => {
+const Footer = ({ bannerGroup }: { bannerGroup?: number }) => {
   return (
     <footer className="bg-altblack flex flex-col gap-10 py-10 text-gray-300">
       {bannerGroup !== undefined  && <FooterBanner bannerGroup={bannerGroup}/>}

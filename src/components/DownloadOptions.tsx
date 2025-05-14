@@ -3,6 +3,7 @@ import CinnamionThumb from "../assets/thumb_cinnamon.png";
 import XfceThumb from "../assets/thumb_xfce.png";
 import MateThumb from "../assets/thumb_mate.png";
 import InteractiveLink from "./InteractiveLink";
+import { Link } from "react-router-dom";
 
 const downloadList = [
   {
@@ -73,7 +74,9 @@ const DownloadOptions = () => {
 
               <div className="mt-6 flex gap-6">
                 <Button buttonType="dark">Download</Button>
-                <InteractiveLink>New Features</InteractiveLink>
+                <Link to={"/new-features"}>
+                  <InteractiveLink>New Features</InteractiveLink>
+                </Link>
                 <InteractiveLink>Release Notes</InteractiveLink>
               </div>
             </div>
