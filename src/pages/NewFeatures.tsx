@@ -619,7 +619,7 @@ const NewFeatures = ({
         </div>
       </div>
 
-      <Footer bannerGroup={1} />
+      <Footer showBanner={true} />
     </>
   );
 };

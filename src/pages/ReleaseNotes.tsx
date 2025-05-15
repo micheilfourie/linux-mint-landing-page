@@ -559,7 +559,7 @@ const ReleaseNotes = ({
         </p>
       </div>
 
-      <Footer />
+      <Footer showBanner={true} />
     </>
   );
 };

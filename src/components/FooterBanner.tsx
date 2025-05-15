@@ -10,14 +10,14 @@ const bannerGroups: string[][] = [
   [Datadog, Eukhost, Tinken],
 ];
 
-const FooterBanner = ({ bannerGroup }: { bannerGroup?: number }) => {
-  if (bannerGroup === undefined || bannerGroup >= bannerGroups.length) {
-    return;
-  }
+const randomIndex = Math.floor(Math.random() * bannerGroups.length);
+
+const FooterBanner = ({showBanner}: {showBanner?: boolean}) => {
 
   return (
+    showBanner &&
     <div className="mx-auto mb-10 grid w-[550px] grid-cols-3 gap-10">
-      {bannerGroups[bannerGroup].map((item, index) => (
+      {bannerGroups[randomIndex].map((item, index) => (
         <img key={index} src={item} alt="" />
       ))}
     </div>

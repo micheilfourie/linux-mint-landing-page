@@ -25,10 +25,10 @@ const DownloadDropdown = ({ navDropdownOpen }: { navDropdownOpen: string }) => {
           <h6 className="font-poppins font-[500]">Other Versions</h6>
           <ul className="font-ubuntu flex flex-col gap-2 text-[15px] font-light">
             <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
-              LMDE 6
+              <Link to={"/download-lmde"}>LMDE 6</Link>
             </li>
             <li className="hover:text-primary-accent cursor-pointer transition-all duration-300 ease-in-out">
-              All Versions
+              <Link to={"/download-all"}>All Versions</Link>
             </li>
           </ul>
         </div>

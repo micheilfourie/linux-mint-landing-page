@@ -22,6 +22,9 @@ const RouteTitleSetter = () => {
       case "/release-notes":
         title = "Linux Mint 22.1 Release Notes";
         break;
+      case "/download-lmde":
+        title = "Download LMDE 6 - Linux Mint";
+        break;
       default:
         title = "Linux Mint";
     }

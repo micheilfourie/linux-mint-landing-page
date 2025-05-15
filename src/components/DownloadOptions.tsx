@@ -24,28 +24,26 @@ const downloadList = [
     edition: "MATE Edition",
     description: `MATE is a classic desktop environment. It is the continuation of GNOME 2, which was Linux Mint’s default desktop between 2006 and 2011.`,
   },
+  {
+    thumbnail: CinnamionThumb,
+    decorHeading: "An alternative to Ubuntu",
+    edition: "Debian Edition",
+    description: `LMDE aims to be as similar as possible to Linux Mint, but without using Ubuntu. The package base is provided by Debian instead.`,
+  },
 ];
 
-const DownloadOptions = () => {
+const DownloadOptions = ({ generateIndex }: { generateIndex?: number }) => {
+  let filteredList = [];
+
+  if (generateIndex !== undefined && generateIndex <= downloadList.length) {
+    filteredList = [downloadList[generateIndex]];
+  } else {
+    filteredList = downloadList.slice(0, 3);
+  }
+
   return (
-    <section>
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-10 px-10 py-6">
-        <div className="flex w-full flex-col items-center justify-center gap-2 border-2 border-dotted border-gray-200 p-10">
-          <h2 className="font-poppins text-altblack text-[26px] font-[500]">
-            Ready to download?
-          </h2>
-          <p className="font-ubuntu text-altblack mb-4 text-center text-[15px] font-light">
-            Linux Mint is available in different flavors. Choose an edition
-            below.
-            <br />
-            For more information read the installation instructions.
-          </p>
-          <a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/">
-            <Button buttonType="primary">Installation Instructions</Button>
-          </a>
-        </div>
-      </div>
-      {downloadList.map((item, index) => (
+    <>
+      {filteredList.map((item, index) => (
         <div
           key={index}
           className={`${index % 2 !== 0 && "bg-altgray"} w-full`}
@@ -85,7 +83,7 @@ const DownloadOptions = () => {
           </div>
         </div>
       ))}
-    </section>
+    </>
   );
 };
 

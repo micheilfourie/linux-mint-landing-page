@@ -6,6 +6,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import NewFeatures from "./pages/NewFeatures";
 import RouteTitleSetter from "./components/RouteTitleSetter";
 import ReleaseNotes from "./pages/ReleaseNotes";
+import LMDE6 from "./pages/LMDE6";
+import AllVersions from "./pages/AllVersions";
 
 function App() {
   const [isThresholdAchieved, setIsthresholdAchieved] = useState(false);
@@ -67,6 +69,24 @@ function App() {
           path="/release-notes"
           element={
             <ReleaseNotes
+              isThresholdAchieved={isThresholdAchieved}
+              handleScrollToTop={handleScrollToTop}
+            />
+          }
+        />
+        <Route
+          path="/download-lmde"
+          element={
+            <LMDE6
+              isThresholdAchieved={isThresholdAchieved}
+              handleScrollToTop={handleScrollToTop}
+            />
+          }
+        />
+        <Route
+          path="/download-all"
+          element={
+            <AllVersions
               isThresholdAchieved={isThresholdAchieved}
               handleScrollToTop={handleScrollToTop}
             />
