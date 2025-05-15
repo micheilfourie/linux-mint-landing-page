@@ -77,7 +77,9 @@ const DownloadOptions = () => {
                 <Link to={"/new-features"}>
                   <InteractiveLink>New Features</InteractiveLink>
                 </Link>
-                <InteractiveLink>Release Notes</InteractiveLink>
+                <Link to={"/release-notes"}>
+                  <InteractiveLink>Release Notes</InteractiveLink>
+                </Link>
               </div>
             </div>
           </div>

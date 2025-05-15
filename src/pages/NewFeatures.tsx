@@ -46,15 +46,19 @@ const NewFeatures = ({
             more comfortable.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px]">
-              <img src={CinnamonThumb} alt="" />
+              <img
+                loading="lazy"
+                src={CinnamonThumb}
+                alt="Cinnamon Thumbnail"
+              />
             </div>
 
-            <label htmlFor="" className="font-ubuntu text-[15px] font-[500]">
+            <figcaption className="font-ubuntu text-[15px] font-[500]">
               Linux Mint 22.1 "Xia"
-            </label>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
 
@@ -68,8 +72,9 @@ const NewFeatures = ({
           modernization of APT dependencies. The goal was to clean up outdated
           components, rationalize, and create a streamlined, future-proof set of
           package management tools and libraries.
-          <br />
-          <br />
+        </p>
+
+        <p className="my-6 font-light">
           APT isn’t just a command-line utility; it’s a robust ecosystem of
           tools (like Synaptic, GDebi, and apturl) and libraries (such as
           aptdaemon and packagekit) that support Mint’s applications. Many of
@@ -77,85 +82,81 @@ const NewFeatures = ({
           no longer maintained upstream. While Linux Mint, Ubuntu, and Debian
           have patched them over the years, their aging design and limited
           features created persistent issues and barriers to innovation.
-          <br />
-          <br />
+        </p>
+
+        <p className="my-6 font-light">
           To address this, Linux Mint transitioned to{" "}
-          <b className="font-[500]">Aptkit</b> and{" "}
-          <b className="font-[500]">Captain</b>:
+          <strong className="font-[500]">Aptkit</strong> and{" "}
+          <strong className="font-[500]">Captain</strong>:
         </p>
 
         <ul className="font-ubuntu text-altblack list-disc pl-5 font-light">
           <li>
-            <b className="font-[500]">Aptkit</b> replaces aptdaemon, providing a
-            streamlined library for package management operations with updated
-            functionality.
+            <strong className="font-[500]">Aptkit</strong> replaces aptdaemon,
+            providing a streamlined library for package management operations
+            with updated functionality.
           </li>
           <li>
-            <b className="font-[500]">Captain</b> unifies the features of GDebi
-            and apturl into a single, easy-to-use utility.
+            <strong className="font-[500]">Captain</strong> unifies the features
+            of GDebi and apturl into a single, easy-to-use utility.
           </li>
         </ul>
 
-        <p className="mb-6">
+        <p className="my-6">
           All the tools previously reliant on aptdaemon, synaptic or apturl now
           use these replacements.
         </p>
 
-        <div className="mt-8 flex flex-col items-center justify-center">
+        <figure className="mt-8 flex flex-col items-center justify-center">
           <div className="max-w-[550px] shadow-lg">
-            <img src={Captain} alt="" />
+            <img loading="lazy" src={Captain} alt="Captain Screenshot" />
           </div>
 
-          <label
-            htmlFor=""
-            className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]"
-          >
+          <figcaption className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]">
             Captain replaces Gdebi/apturl with better translations and less bugs
-          </label>
-        </div>
+          </figcaption>
+        </figure>
 
         <p className="my-6 font-light">This transition has several benefits:</p>
 
         <ul className="font-ubuntu text-altblack list-disc pl-5 font-light">
           <li>
-            <b className="font-[500]">Better translations:</b> Everything is now
-            fully translated, eliminating longstanding localization issues.
+            <strong className="font-[500]">Better translations:</strong>{" "}
+            Everything is now fully translated, eliminating longstanding
+            localization issues.
           </li>
           <li>
-            <b className="font-[500]">Improved quality:</b> By removing reliance
-            on unmaintained components, Mint ensures fewer bugs and "paper
-            cuts". Small bugs can be addressed, they're no longer considered as
-            "upstream / wontfix".
+            <strong className="font-[500]">Improved quality:</strong> By
+            removing reliance on unmaintained components, Mint ensures fewer
+            bugs and "paper cuts". Small bugs can be addressed, they're no
+            longer considered as "upstream / wontfix".
           </li>
           <li>
-            <b className="font-[500]">Simplified architecture:</b> Moving to
-            Aptkit allowed the Software Sources to downgrade foreign packages
-            graphically and no longer rely on a VTE. In the Update Manager, it
-            empowered us to boost Wayland compatibility and modernize the
-            multithreading and multiprocessing code, which were getting very
-            old.
+            <strong className="font-[500]">Simplified architecture:</strong>{" "}
+            Moving to Aptkit allowed the Software Sources to downgrade foreign
+            packages graphically and no longer rely on a VTE. In the Update
+            Manager, it empowered us to boost Wayland compatibility and
+            modernize the multithreading and multiprocessing code, which were
+            getting very old.
           </li>
           <li>
-            <b className="font-[500]">Easier development:</b> Rather than
-            constantly patching release after release (packagekit's inability to
-            purge, aptdaemon's inability to remove essential orphans), we
-            develop the features we need and rely on libraries that fully
-            support what we need.
+            <strong className="font-[500]">Easier development:</strong> Rather
+            than constantly patching release after release (packagekit's
+            inability to purge, aptdaemon's inability to remove essential
+            orphans), we develop the features we need and rely on libraries that
+            fully support what we need.
           </li>
         </ul>
 
-        <div className="mt-8 flex flex-col items-center justify-center">
+        <figure className="mt-8 flex flex-col items-center justify-center">
           <div className="max-w-[550px] shadow-lg">
-            <img src={Foreign} alt="" />
+            <img loading="lazy" src={Foreign} alt="Foreign Screenshot" />
           </div>
 
-          <label
-            htmlFor=""
-            className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]"
-          >
+          <figcaption className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]">
             Foreign packages can be downgraded graphically
-          </label>
-        </div>
+          </figcaption>
+        </figure>
 
         <p className="my-6">
           While these changes might be invisible to most users, they lay the
@@ -165,19 +166,16 @@ const NewFeatures = ({
           the future.
         </p>
 
-        <div className="mt-8 flex flex-col items-center justify-center">
+        <figure className="mt-8 flex flex-col items-center justify-center">
           <div className="max-w-[550px] shadow-lg">
-            <img src={MintUpdate} alt="" />
+            <img loading="lazy" src={MintUpdate} alt="Mint Update Screenshot" />
           </div>
 
-          <label
-            htmlFor=""
-            className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]"
-          >
+          <figcaption className="font-ubuntu text-altblack mt-4 text-[15px] font-[500]">
             Much improved package management, multithreading and multiprocessing
             in the Update Manager
-          </label>
-        </div>
+          </figcaption>
+        </figure>
 
         <p className="my-6">
           These changes represent a significant step toward a smoother and more
@@ -199,12 +197,12 @@ const NewFeatures = ({
 
           <ul className="font-ubuntu list-disc pl-5 font-light">
             <li>
-              <b className="font-[500]">Power-saver mode:</b> Limits performance
-              to conserve energy.
+              <strong className="font-[500]">Power-saver mode:</strong> Limits
+              performance to conserve energy.
             </li>
             <li>
-              <b className="font-[500]">Balanced mode:</b> Adjusts performance
-              based on your needs.
+              <strong className="font-[500]">Balanced mode:</strong> Adjusts
+              performance based on your needs.
             </li>
           </ul>
 
@@ -212,62 +210,71 @@ const NewFeatures = ({
             On supported systems, an additional Performance mode is available.
             This mode maximizes performance at the cost of increased power
             consumption.
-            <br />
-            <br />
+          </p>
+
+          <p className="my-6 font-light">
             Power-saving modes reduce performance but can extend battery life,
             reduce heat generation, lower CPU frequency, and decrease fan noise.
             Note that the system may override user settings based on the
             selected mode to adjust display brightness or make temporary
             adjustments to further reduce power consumption or enhance
             performance.
-            <br />
-            <br />
-            In Cinnamon, you can select the power mode by navigating to
-            <b className="font-[500]"> Preferences → Power Management:</b>
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <p className="my-6 font-light">
+            In Cinnamon, you can select the power mode by navigating to
+            <strong className="font-[500]">
+              {" "}
+              Preferences → Power Management:
+            </strong>
+          </p>
+
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={PowerSettings} alt="" />
+              <img
+                loading="lazy"
+                src={PowerSettings}
+                alt="Power Settings Screenshot"
+              />
             </div>
 
-            <label
-              htmlFor=""
-              className="font-ubuntu mt-4 text-[15px] font-[500]"
-            >
+            <figcaption className="font-ubuntu mt-4 text-[15px] font-[500]">
               Power mode selection in the Cinnamon settings
-            </label>
-          </div>
+            </figcaption>
+          </figure>
 
           <p className="my-6">
             Alternatively, you can select a power mode directly from the power
             applet:
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={PowerApplet} alt="" />
+              <img
+                loading="lazy"
+                src={PowerApplet}
+                alt="Power Applet Screenshot"
+              />
             </div>
 
-            <label
-              htmlFor=""
-              className="font-ubuntu mt-4 text-[15px] font-[500]"
-            >
+            <figcaption className="font-ubuntu mt-4 text-[15px] font-[500]">
               Power mode selection in the power applet
-            </label>
-          </div>
+            </figcaption>
+          </figure>
 
           <p className="my-6">
             In Xfce and MATE, power modes can be managed from the terminal.
-            <br />
-            <br />
+          </p>
+
+          <p className="my-6 font-light">
             To view the available power modes, run the following command:{" "}
             <code className="mr-1 ml-4 rounded bg-gray-200 px-1">
               powerprofilesctl
             </code>
             .
-            <br />
-            <br />
+          </p>
+
+          <p className="my-6 font-light">
             To switch between modes, use the following commands:
           </p>
 
@@ -305,48 +312,52 @@ const NewFeatures = ({
             light by warming up the color of your monitor. As you approach
             bedtime, it adjusts the screen to help reduce eyestrain, headaches,
             and improve sleep quality.
-            <br />
-            <br />
-            This feature is fully integrated into the Cinnamon desktop
-            environment and it supports both Xorg and Wayland.
-            <br />
-            <br />
-            To enable Night Light, navigate to{" "}
-            <b className="font-[500]">Settings → Night Light</b> and toggle the
-            option to activate it.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <p className="font-ubuntu mb-6 font-light">
+            This feature is fully integrated into the Cinnamon desktop
+            environment and it supports both Xorg and Wayland.
+          </p>
+
+          <p className="font-ubuntu mb-6 font-light">
+            To enable Night Light, navigate to{" "}
+            <strong className="font-[500]">Settings → Night Light</strong> and
+            toggle the option to activate it.
+          </p>
+
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={NightLight} alt="" />
+              <img
+                loading="lazy"
+                src={NightLight}
+                alt="Night Light Screenshot"
+              />
             </div>
 
-            <label
-              htmlFor=""
-              className="font-ubuntu mt-4 text-[15px] font-[500]"
-            >
+            <figcaption className="font-ubuntu mt-4 text-[15px] font-[500]">
               Night Light in Cinnamon
-            </label>
-          </div>
+            </figcaption>
+          </figure>
 
           <p className="font-ubuntu my-6 font-light">
             By default, Cinnamon automatically calculates your local sunrise and
             sunset times based on your system's timezone. During the day, the
             screen displays cooler, bluer tones, while at night, Night Light
             shifts the screen to warmer, redder tones.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu my-6 font-light">
             If you prefer, you can switch to a manual schedule and set custom
             start and end times for when the feature is active.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu my-6 font-light">
             You can also adjust the color temperature to control how warm or
             neutral you want the display to be during the night.
           </p>
         </div>
       </div>
 
-      {/*  */}
       <div className="bg-altgray w-full">
         <div className="text-altblack mx-auto max-w-[1200px] p-10">
           <h1 className="font-poppins mb-6 text-[28px] font-[500]">
@@ -357,22 +368,24 @@ const NewFeatures = ({
             Linux Mint 22.1 ships with the latest version of Cinnamon, which
             introduces a brand new default theme, native dialogs, new features
             and much improved Wayland compatibility.
-            <br />
-            <br />
-            <b className="text-lg font-[500]">New default theme</b>
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
+            <strong className="text-lg font-[500]">New default theme</strong>
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
             The default theme was redesigned with a modern aesthetic,
             characterized by smoother, rounded elements and darker tones that
             provide more contrast and depth. These changes are aimed at making
             the Cinnamon desktop visually appealing in all Linux distributions.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Calendar} alt="" />
+              <img loading="lazy" src={Calendar} alt="Calendar Screenshot" />
             </div>
-          </div>
+          </figure>
 
           <p className="font-ubuntu my-8 font-light">
             The rounder corners and refined contrasts allow the interface to
@@ -380,20 +393,24 @@ const NewFeatures = ({
             experience. The design adjustments align with trends in contemporary
             UI/UX design, offering a more polished and efficient interface while
             ensuring that Cinnamon retains its classic, approachable aesthetic.
-            <br />
-            <br />
-            <b className="text-lg font-[500]">Cleaner, modern dialogs</b>
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
+            <strong className="text-lg font-[500]">
+              Cleaner, modern dialogs
+            </strong>
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
             The confirmation dialogs now feature a cleaner layout and clearly
             separated buttons.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Dialog} alt="" />
+              <img loading="lazy" src={Dialog} alt="Dialog Screenshot" />
             </div>
-          </div>
+          </figure>
 
           <p className="font-ubuntu my-8 font-light">
             The dialogs to end the session, kill a non-responsive application,
@@ -403,11 +420,11 @@ const NewFeatures = ({
             which are not compatible with Wayland.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Keyring} alt="" />
+              <img loading="lazy" src={Keyring} alt="Keyring Screenshot" />
             </div>
-          </div>
+          </figure>
 
           <p className="font-ubuntu my-8 font-light">
             To improve compatibility and make the user experience more
@@ -415,33 +432,37 @@ const NewFeatures = ({
             Clutter, just like the panel and the other desktop components.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Display} alt="" />
+              <img loading="lazy" src={Display} alt="Display Screenshot" />
             </div>
-          </div>
+          </figure>
 
           <p className="font-ubuntu my-8 font-light">
             On-Screen display elements were also redesigned to look cleaner and
             more modern than before.
           </p>
 
-          <div className="flex flex-col items-center justify-center">
+          <figure className="flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Sound} alt="" />
+              <img loading="lazy" src={Sound} alt="Sound Screenshot" />
             </div>
-          </div>
+          </figure>
 
           <p className="font-ubuntu my-8 font-light">
-            <b className="text-lg font-[500]">Improved Wayland compatibility</b>
-            <br />
-            <br />
+            <strong className="text-lg font-[500]">
+              Improved Wayland compatibility
+            </strong>
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
             In Cinnamon 6.4, we've replaced the deprecated `policykit-1-gnome`,
             which had issues under Wayland, with native dialogs for better
             integration. As a result, all applications and features that require
             admin privileges are now fully functional in Cinnamon on Wayland.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu my-8 font-light">
             This includes crucial features like:
           </p>
 
@@ -459,11 +480,12 @@ const NewFeatures = ({
           </p>
 
           <p className="font-ubuntu my-8 font-light">
-            <b className="text-lg font-[500]">Other Cinnamon improvements</b>
-            <br />
-            <br />
-            New options include:
+            <strong className="text-lg font-[500]">
+              Other Cinnamon improvements
+            </strong>
           </p>
+
+          <p className="font-ubuntu my-8 font-light">New options include:</p>
 
           <ul className="font-ubuntu list-disc pl-5 font-light">
             <li className="font-ubuntu font-light">
@@ -512,13 +534,15 @@ const NewFeatures = ({
         <p className="font-ubuntu text-[15px] font-light">
           The Software Manager has been optimized for better speed, ensuring
           faster application browsing and installations.
-          <br />
-          <br />
+        </p>
+
+        <p className="font-ubuntu my-8 text-[15px] font-light">
           The Bulky file manager now includes a useful feature for removing
           accents from file names, which is especially handy for international
           users managing large batches of files.
-          <br />
-          <br />
+        </p>
+
+        <p className="font-ubuntu my-8 text-[15px] font-light">
           Thumbnails are now generated for .ora (OpenRaster) files, making it
           easier to browse graphic design projects and workflows.
         </p>
@@ -533,31 +557,34 @@ const NewFeatures = ({
           <p className="font-ubuntu mb-8 font-light">
             In the Mint-Y theme, Cinnamon looks darker, rounder and more modern
             than before.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu mb-8 font-light">
             Since "Maya" in 2012, every Linux Mint release has come with a fresh
             batch of desktop wallpapers. People love them, and new sets are
             always a highlight, but with over 20 collections now, finding the
             right one has gotten tricky.
           </p>
 
-          <div className="flex flex-col items-center mb-6 justify-center">
+          <figure className="mb-6 flex flex-col items-center justify-center">
             <div className="max-w-[550px] shadow-lg">
-              <img src={Backgrounds} alt="" />
+              <img
+                loading="lazy"
+                src={Backgrounds}
+                alt="Backgrounds Screenshot"
+              />
             </div>
-            <label
-              htmlFor=""
-              className="font-ubuntu mt-4 text-[15px] font-[500]"
-            >
+            <figcaption className="font-ubuntu mt-4 text-[15px] font-[500]">
               "Wallpapers" features the best colorful desktop backgrounds
-            </label>
-          </div>
+            </figcaption>
+          </figure>
 
           <p className="font-ubuntu mb-8 font-light">
             Starting with Linux Mint 22.1, wallpapers are moving to themed sets,
             making them easier to explore and more organized.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu mb-8 font-light">
             The first set is "Wallpapers," full of bold, colorful designs
             featuring cool abstract patterns and 3D shapes to give your desktop
             a vibrant new look!
@@ -578,12 +605,14 @@ const NewFeatures = ({
 
           <p className="font-ubuntu mb-8 font-light">
             Linux Mint 22.1 will receive security updates until 2029.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu mb-8 font-light">
             Until 2026, future versions of Linux Mint will use the same package
             base as Linux Mint 22.1, making it trivial for people to upgrade.
-            <br />
-            <br />
+          </p>
+
+          <p className="font-ubuntu mb-8 font-light">
             Until 2026, the development team won't start working on a new base
             and will be fully focused on this one.
           </p>

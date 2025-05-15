@@ -5,6 +5,7 @@ import Download from "./pages/Download";
 import ScrollToTop from "./components/ScrollToTop";
 import NewFeatures from "./pages/NewFeatures";
 import RouteTitleSetter from "./components/RouteTitleSetter";
+import ReleaseNotes from "./pages/ReleaseNotes";
 
 function App() {
   const [isThresholdAchieved, setIsthresholdAchieved] = useState(false);
@@ -33,7 +34,7 @@ function App() {
     <>
       <RouteTitleSetter />
       <ScrollToTop />
-      
+
       <Routes>
         <Route
           path="/"
@@ -57,6 +58,15 @@ function App() {
           path="/new-features"
           element={
             <NewFeatures
+              isThresholdAchieved={isThresholdAchieved}
+              handleScrollToTop={handleScrollToTop}
+            />
+          }
+        />
+        <Route
+          path="/release-notes"
+          element={
+            <ReleaseNotes
               isThresholdAchieved={isThresholdAchieved}
               handleScrollToTop={handleScrollToTop}
             />
