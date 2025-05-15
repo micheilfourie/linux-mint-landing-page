@@ -51,7 +51,9 @@ const DownloadDropdown = ({ navDropdownOpen }: { navDropdownOpen: string }) => {
         </div>
 
         <div>
-          <Button buttonType="secondary">Installation Guide</Button>
+          <a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/">
+            <Button buttonType="secondary">Installation Guide</Button>
+          </a>
         </div>
       </div>
     </div>

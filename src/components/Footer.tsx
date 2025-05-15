@@ -127,7 +127,6 @@ const Footer = ({ showBanner }: { showBanner?: boolean }) => {
               {list.map(({ link, title }, index) => (
                 <li key={index}>
                   <a
-                    target="_blank"
                     href={link}
                     className="hover:text-primary-accent transition-all duration-300 ease-in-out"
                   >
