@@ -6,6 +6,7 @@ type StoreType = {
   updateScroll: () => void;
   updateWidth: () => void;
   navOpen: boolean
+  toggleNav: () => void
 };
 
 const scrollThreshold = 300;
