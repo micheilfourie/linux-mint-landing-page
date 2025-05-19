@@ -47,7 +47,10 @@ const Carousel = ({
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {sliderContentList.map((item, index) => (
-            <div key={index} className="w-full flex-shrink-0 px-20 text-center">
+            <div
+              key={index}
+              className="w-full flex-shrink-0 px-6 text-center lg:px-20"
+            >
               <p className="font-ubuntu mb-2 text-[22px] leading-10 font-[300]">
                 {item.comment}
               </p>
@@ -79,7 +82,7 @@ const Carousel = ({
 
         <button
           onClick={() => handleNextSlide()}
-          className="absolute right-2 bottom-1/3 z-10 flex size-14 cursor-pointer items-center justify-center rounded-full border-2 border-gray-400"
+          className="absolute right-2 bottom-1/3 z-10 flex size-14 cursor-pointer items-center justify-center rounded-full border-2 border-gray-400 max-lg:hidden"
         >
           <FontAwesomeIcon
             icon={faChevronRight}
@@ -89,7 +92,7 @@ const Carousel = ({
 
         <button
           onClick={() => handlePrevSlide()}
-          className="absolute bottom-1/3 left-2 z-10 flex size-14 cursor-pointer items-center justify-center rounded-full border-2 border-gray-400"
+          className="absolute bottom-1/3 left-2 z-10 flex size-14 cursor-pointer items-center justify-center rounded-full border-2 border-gray-400 max-lg:hidden"
         >
           <FontAwesomeIcon
             icon={faChevronLeft}

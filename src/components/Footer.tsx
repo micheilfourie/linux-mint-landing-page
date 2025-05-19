@@ -71,7 +71,7 @@ const Footer = ({ showBanner }: { showBanner?: boolean }) => {
         <FooterBanner />
       )}
 
-      <div className="mx-auto flex flex-wrap gap-10 px-10 pt-10">
+      <div className="mx-auto flex flex-wrap gap-10 lg:px-10 px-6 pt-10">
         <div className="flex max-w-[300px] flex-col gap-4">
           <Link to={"/"}>
             <img src={Logo} alt="" className="w-[200px]" />
@@ -141,7 +141,7 @@ const Footer = ({ showBanner }: { showBanner?: boolean }) => {
 
       <hr className="border-gray-600" />
 
-      <div className="mx-auto w-full max-w-[1200px] px-10">
+      <div className="mx-auto w-full max-w-[1200px] lg:px-10 px-6">
         <p className="font-ubuntu font-light">
           Linux Mint is copyrighted since 2006 and trademarked through the Linux
           Mark Institute. All rights reserved.

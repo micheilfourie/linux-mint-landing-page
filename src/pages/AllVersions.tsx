@@ -3,23 +3,14 @@ import ScrollTopButton from "../components/ScrollTopButton";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 
-const AllVersions = ({
-  isThresholdAchieved,
-  handleScrollToTop,
-}: {
-  isThresholdAchieved: boolean;
-  handleScrollToTop: () => void;
-}) => {
+const AllVersions = () => {
   return (
     <>
-      <FixedNav isThresholdAchieved={isThresholdAchieved} />
-      <ScrollTopButton
-        isThresholdAchieved={isThresholdAchieved}
-        handleScrollToTop={handleScrollToTop}
-      />
+      <FixedNav />
+      <ScrollTopButton />
       <PageHeader>All Versions</PageHeader>
 
-      <section className="mx-auto flex max-w-[1200px] flex-col mt-4 gap-10 px-10 py-6">
+      <section className="mx-auto mt-4 flex max-w-[1200px] flex-col gap-10 lg:px-10 px-6 py-6">
         <div className="text-center">
           <h3 className="font-playfair text-altblack text-[24px] italic">
             Currently supported
@@ -34,7 +25,7 @@ const AllVersions = ({
         </div>
 
         <div className="overflow-x-auto">
-          <table className="bg-altgray mb-10 border-collapse border border-gray-300 w-full">
+          <table className="bg-altgray mb-10 w-full border-collapse border border-gray-300">
             <thead className="from-secondary-accent to-tertiary-accent bg-gradient-to-r">
               <tr className="divide-x divide-gray-300">
                 <th className="font-poppins text-altwhite p-4 py-4 font-[500] text-nowrap uppercase">

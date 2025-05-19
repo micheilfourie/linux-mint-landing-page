@@ -10,21 +10,12 @@ import Footer from "../components/Footer";
 import FixedNav from "../components/FixedNav";
 import ScrollTopButton from "../components/ScrollTopButton";
 
-const Home = ({
-  isThresholdAchieved,
-  handleScrollToTop,
-}: {
-  isThresholdAchieved: boolean;
-  handleScrollToTop: () => void;
-}) => {
+const Home = () => {
   return (
     <>
-      <FixedNav isThresholdAchieved={isThresholdAchieved} />
-      <ScrollTopButton
-        isThresholdAchieved={isThresholdAchieved}
-        handleScrollToTop={handleScrollToTop}
-      />
-      
+      <FixedNav />
+      <ScrollTopButton />
+
       <Hero />
       <Features />
 
@@ -46,7 +37,7 @@ const Home = ({
         <h2 className="font-poppins text-[30px] font-[500]">
           A fantastic community!
         </h2>
-        <p className="font-ubuntu w-[60%] text-center">
+        <p className="font-ubuntu lg:w-[60%] text-center">
           We receive more than 300 donations a month. Our users love what we do
           and they mean the World to us. Around the desktop operating system
           Linux Mint is also a fantastic community.

@@ -54,9 +54,9 @@ const partnerList: PartnerType[] = [
 
 const Partners = () => {
   return (
-    <section className="text-altblack m-20 mx-auto max-w-[700px] px-10">
+    <section className="text-altblack m-20 mx-auto max-w-[700px] lg:px-10 px-6">
       <div className="grid grid-cols-3 gap-14">
-        <div className="col-span-3 mb-4 flex flex-col items-center justify-center gap-3">
+        <div className="col-span-3 mb-4 flex flex-col sm:items-center justify-center gap-3">
           <h3 className="font-playfair text-[24px] italic">
             Brought to you by
           </h3>

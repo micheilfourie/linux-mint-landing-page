@@ -32,25 +32,29 @@ const FromBlog = () => {
   return (
     <section className="border-y border-gray-200 bg-gray-100">
       <div className="text-altblack mx-auto my-20 max-w-[1200px]">
-        <div className="text-center flex flex-col gap-2 mb-14">
-          <h3 className="font-playfair text-[24px] italic mb-2">From the blog</h3>
+        <div className="mb-14 flex flex-col gap-2 text-center">
+          <h3 className="font-playfair mb-2 text-[24px] italic">
+            From the blog
+          </h3>
           <h2 className="font-poppins text-4xl font-[600]">Latest news</h2>
           <p className="font-ubuntu text-[15px] font-light">
             Click a news title to get to the article.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 px-10">
+        <div className="grid grid-cols-3 gap-10 px-6 max-lg:grid-cols-1 lg:px-10">
           {blogList.map((item, index) => (
             <Card key={index} cardType="secondary">
-              <div className="flex items-center justify-between mb-2">
-                <p className="font-ubuntu text-[15px] text-gray-400 font-light">
+              <div className="mb-2 flex items-center justify-between">
+                <p className="font-ubuntu text-[15px] font-light text-gray-400">
                   {item.date}
                 </p>
                 <Tag>Blog</Tag>
               </div>
 
-              <h3 className="font-poppins text-[18px] text-gray-400 mb-3">{item.title}</h3>
+              <h3 className="font-poppins mb-3 text-[18px] text-gray-400">
+                {item.title}
+              </h3>
               <p className="font-ubuntu text-[15px] font-light">
                 {item.snippet}
               </p>

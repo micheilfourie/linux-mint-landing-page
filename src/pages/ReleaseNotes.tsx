@@ -7,20 +7,11 @@ import Vbox1 from "../assets/vbox1.png";
 import Vbox2 from "../assets/vbox2.png";
 import GrubVideo from "../assets/nomodeset_grub.webm";
 
-const ReleaseNotes = ({
-  isThresholdAchieved,
-  handleScrollToTop,
-}: {
-  isThresholdAchieved: boolean;
-  handleScrollToTop: () => void;
-}) => {
+const ReleaseNotes = () => {
   return (
     <>
-      <FixedNav isThresholdAchieved={isThresholdAchieved} />
-      <ScrollTopButton
-        isThresholdAchieved={isThresholdAchieved}
-        handleScrollToTop={handleScrollToTop}
-      />
+      <FixedNav />
+      <ScrollTopButton />
       <PageHeader>Release Notes</PageHeader>
 
       <div className="text-altblack mx-auto max-w-[1200px] p-10">

@@ -3,7 +3,7 @@ import Pattern from "../assets/pattern.png";
 
 const PageHeader = ({ children }: { children: React.ReactNode}) => {
   return (
-    <section className="from-secondary-accent to-tertiary-accent relative h-[220px] bg-gradient-to-br">
+    <section className="from-secondary-accent to-tertiary-accent relative pb-4 bg-gradient-to-br">
       <img
         src={Pattern}
         alt=""

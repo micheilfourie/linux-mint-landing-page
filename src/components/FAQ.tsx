@@ -30,9 +30,9 @@ const faqList: faqType[] = [
 
 const FAQ = () => {
   return (
-    <section className="text-altwhite bg-altblack ">
-      <div className="mx-auto mt-20 flex max-w-[1200px] flex-col gap-10 px-10 py-20">
-        <div className="mx-auto mb-4 flex flex-col items-center justify-center gap-3 text-center">
+    <section className="text-altwhite bg-altblack">
+      <div className="mt-20 mx-auto flex max-w-[1200px] flex-col gap-10 px-6 py-20 lg:px-10">
+        <div className="mb-4 flex flex-col lg:items-center justify-center gap-3 lg:text-center">
           <h3 className="font-playfair text-[24px] italic">
             Have any questions?
           </h3>
@@ -46,12 +46,9 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="divide-primary-accent flex divide-x divide-dashed">
+        <div className="divide-primary-accent flex divide-dashed max-lg:flex-col max-lg:gap-10 lg:divide-x">
           {faqList.map((item, index) => (
-            <div
-              key={index}
-              className="relative w-[25%] flex-col gap-2 px-[20px]"
-            >
+            <div key={index} className="relative lg:w-[25%] lg:px-[20px]">
               <h3 className="font-poppins mb-3 text-[22px] font-[500]">
                 {item.question}
               </h3>
@@ -61,7 +58,7 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center mt-4">
+        <div className="mt-4 flex items-center justify-center">
           <Button buttonType="primary">Read More FAQs</Button>
         </div>
       </div>

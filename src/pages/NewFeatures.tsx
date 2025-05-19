@@ -16,20 +16,11 @@ import Display from "../assets/display.png";
 import Sound from "../assets/sound.png";
 import Backgrounds from "../assets/backgrounds.png";
 
-const NewFeatures = ({
-  isThresholdAchieved,
-  handleScrollToTop,
-}: {
-  isThresholdAchieved: boolean;
-  handleScrollToTop: () => void;
-}) => {
+const NewFeatures = () => {
   return (
     <>
-      <FixedNav isThresholdAchieved={isThresholdAchieved} />
-      <ScrollTopButton
-        isThresholdAchieved={isThresholdAchieved}
-        handleScrollToTop={handleScrollToTop}
-      />
+      <FixedNav />
+      <ScrollTopButton />
 
       <PageHeader>New Features</PageHeader>
 

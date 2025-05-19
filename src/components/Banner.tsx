@@ -17,7 +17,7 @@ const Banner = ({ pattern, children }: BannerType) => {
         alt=""
         className="pointer-events-none absolute top-0 h-full w-full object-cover"
       />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center text-center justify-center px-4">
         {children}
       </div>
     </div>

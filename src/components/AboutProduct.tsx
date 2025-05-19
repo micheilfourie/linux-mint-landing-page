@@ -51,8 +51,8 @@ const productInfoList: ProductInfoType[] = [
 
 const AboutProduct = () => {
   return (
-    <section className="text-altblack mx-auto mt-20 grid max-w-[1200px] grid-cols-3 gap-10 px-10">
-      <div className="col-span-3 mb-4 flex flex-col items-center justify-center gap-3">
+    <section className="text-altblack mx-auto mt-20 grid max-w-[1200px] grid-cols-3 max-lg:grid-cols-1 gap-10 lg:px-10 max-lg:px-6">
+      <div className="lg:col-span-3 mb-4 flex flex-col lg:items-center justify-center gap-3">
         <h3 className="font-playfair text-[24px] italic">
           Why choose Linux Mint?
         </h3>

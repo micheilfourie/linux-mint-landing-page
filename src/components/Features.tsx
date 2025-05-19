@@ -42,7 +42,7 @@ const cardContentList: CardContentType[] = [
 
 const Features = () => {
   return (
-    <section className="mx-auto mt-16 grid max-w-[1200px] grid-cols-[1fr_1fr_1fr] gap-[30px] px-10 mb-20">
+    <section className="mx-auto mt-16 grid max-w-[1200px] grid-cols-[1fr_1fr_1fr] max-lg:grid-cols-1 gap-10 lg:px-10 max-lg:px-6 mb-20">
       <div className="flex flex-col gap-2">
         <h5 className="text-primary-accent font-poppins text-xl font-[500]">
           Features
@@ -59,7 +59,7 @@ const Features = () => {
         <FeatureCardMap cards={cardContentList.slice(0, 1)} />
       </div>
 
-      <div className="mt-12 flex flex-col gap-10">
+      <div className="lg:mt-12 flex flex-col gap-10">
         <FeatureCardMap cards={cardContentList.slice(1, 3)} />
       </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Download from "./pages/Download";
@@ -8,29 +8,23 @@ import RouteTitleSetter from "./components/RouteTitleSetter";
 import ReleaseNotes from "./pages/ReleaseNotes";
 import LMDE6 from "./pages/LMDE6";
 import AllVersions from "./pages/AllVersions";
+import store from "./useStore";
 
 function App() {
-  const [isThresholdAchieved, setIsthresholdAchieved] = useState(false);
-  const scrollThreshold = 300;
-
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const handleScroll = store((state) => state.updateScroll);
+  const handleWidth = store((state) => state.updateWidth);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-
-      if (!isThresholdAchieved && currentY > scrollThreshold) {
-        setIsthresholdAchieved(true);
-      } else if (isThresholdAchieved && currentY <= scrollThreshold) {
-        setIsthresholdAchieved(false);
-      }
-    };
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isThresholdAchieved]);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    handleWidth();
+    window.addEventListener("resize", handleWidth);
+    return () => window.removeEventListener("resize", handleWidth);
+  }, [handleWidth]);
 
   return (
     <>
@@ -38,60 +32,12 @@ function App() {
       <ScrollToTop />
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
-        <Route
-          path="/download"
-          element={
-            <Download
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
-        <Route
-          path="/new-features"
-          element={
-            <NewFeatures
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
-        <Route
-          path="/release-notes"
-          element={
-            <ReleaseNotes
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
-        <Route
-          path="/download-lmde"
-          element={
-            <LMDE6
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
-        <Route
-          path="/download-all"
-          element={
-            <AllVersions
-              isThresholdAchieved={isThresholdAchieved}
-              handleScrollToTop={handleScrollToTop}
-            />
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/download" element={<Download />} />
+        <Route path="/new-features" element={<NewFeatures />} />
+        <Route path="/release-notes" element={<ReleaseNotes />} />
+        <Route path="/download-lmde" element={<LMDE6 />} />
+        <Route path="/download-all" element={<AllVersions />} />
       </Routes>
     </>
   );

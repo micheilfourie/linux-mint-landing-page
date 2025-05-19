@@ -4,23 +4,14 @@ import ScrollTopButton from "../components/ScrollTopButton";
 import Footer from "../components/Footer";
 import DownloadOptions from "../components/DownloadOptions";
 
-const LMDE6 = ({
-  isThresholdAchieved,
-  handleScrollToTop,
-}: {
-  isThresholdAchieved: boolean;
-  handleScrollToTop: () => void;
-}) => {
+const LMDE6 = () => {
   return (
     <>
-      <FixedNav isThresholdAchieved={isThresholdAchieved} />
-      <ScrollTopButton
-        isThresholdAchieved={isThresholdAchieved}
-        handleScrollToTop={handleScrollToTop}
-      />
+      <FixedNav />
+      <ScrollTopButton />
       <PageHeader>LMDE 6 'Faye'</PageHeader>
 
-      <section className="mx-auto flex max-w-[1200px] flex-col gap-10 px-10 py-6">
+      <section className="mx-auto flex max-w-[1200px] flex-col gap-10 lg:px-10 px-6 py-6">
         <div className="flex w-full flex-col items-center justify-center gap-2 border-2 border-dotted border-gray-200 p-10">
           <h2 className="font-poppins text-altblack text-[26px] font-[500]">
             What is LMDE?
@@ -40,9 +31,9 @@ const LMDE6 = ({
         </div>
       </section>
 
-      <DownloadOptions generateIndex={3}/>
+      <DownloadOptions generateIndex={3} />
 
-      <Footer showBanner={true}/>
+      <Footer showBanner={true} />
     </>
   );
 };

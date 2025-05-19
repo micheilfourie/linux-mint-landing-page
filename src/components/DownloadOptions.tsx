@@ -49,17 +49,17 @@ const DownloadOptions = ({ generateIndex }: { generateIndex?: number }) => {
           className={`${index % 2 !== 0 && "bg-altgray"} w-full`}
         >
           <div
-            className={`mx-auto flex w-full max-w-[1200px] items-center justify-evenly p-8 ${index % 2 !== 0 && "flex-row-reverse"}`}
+            className={`mx-auto flex max-lg:flex-col w-full max-w-[1200px] lg:items-center lg:justify-evenly p-8 ${index % 2 !== 0 && "flex-row-reverse"}`}
           >
-            <div className="w-[50%]">
+            <div className="lg:w-[50%]">
               <img
                 src={item.thumbnail}
                 alt=""
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover max-w-[500px]"
               />
             </div>
 
-            <div className="w-[50%] px-8">
+            <div className="lg:w-[50%] lg:px-8 max-lg:mt-6">
               <h3 className="font-playfair text-altblack text-[24px] italic">
                 {item.decorHeading}
               </h3>
