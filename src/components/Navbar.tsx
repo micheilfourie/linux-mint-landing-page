@@ -20,7 +20,6 @@ import AboutDropdown from "./AboutDropdown";
 import LinksDropdown from "./LinksDropdown";
 import { useState } from "react";
 import useStore from "../useStore";
-import Tag from "./Tag";
 import {
   faDiscord,
   faFacebook,
@@ -121,18 +120,18 @@ const Navbar = () => {
           </button>
 
           <div
-            className={`bg-altwhite absolute top-[75px] right-0 w-full shadow-md ${navOpen ? "" : "scale-y-0"} translate-all origin-top duration-300 ease-in-out`}
+            className={`bg-altwhite absolute top-[75px] right-0 max-h-[400px] w-full overflow-y-auto shadow-md ${navOpen ? "" : "scale-y-0"} translate-all origin-top duration-300 ease-in-out`}
           >
             <ul className="font-ubuntu text-altblack divide-altgray flex flex-col divide-y text-[15px]">
               <Link to={"/"}>
-                <li className="flex cursor-pointer items-center justify-between gap-4 p-4 transition-all duration-300 ease-in-out">
+                <li className="flex cursor-pointer items-center justify-between gap-4 px-5 py-3 transition-all duration-300 ease-in-out">
                   Home
                 </li>
               </Link>
 
               <li
                 onClick={() => handleDropdownToggle("download")}
-                className="flex cursor-pointer flex-col gap-4 p-4 transition-all duration-300 ease-in-out"
+                className="flex cursor-pointer flex-col gap-4 px-5 py-3 transition-all duration-300 ease-in-out"
               >
                 <div className="flex items-center justify-between">
                   Download
@@ -153,9 +152,6 @@ const Navbar = () => {
                       <ul className="font-ubuntu text-[15px] font-light">
                         <li className="nowrap hover:text-primary-accent flex gap-4 transition-all duration-300 ease-in-out">
                           <Link to={"/download"}>Linux Mint 22.1</Link>
-                          <span className="cursor-default">
-                            <Tag>recommended</Tag>
-                          </span>
                         </li>
                       </ul>
                     </div>
@@ -179,7 +175,7 @@ const Navbar = () => {
 
               <li
                 onClick={() => handleDropdownToggle("project")}
-                className="flex cursor-pointer flex-col gap-4 p-4 transition-all duration-300 ease-in-out"
+                className="flex cursor-pointer flex-col gap-4 p-3 px-5 transition-all duration-300 ease-in-out"
               >
                 <div className="flex items-center justify-between">
                   Project
@@ -228,7 +224,7 @@ const Navbar = () => {
 
               <li
                 onClick={() => handleDropdownToggle("about")}
-                className="flex cursor-pointer flex-col gap-4 p-4 transition-all duration-300 ease-in-out"
+                className="flex cursor-pointer flex-col gap-4 px-5 py-3 transition-all duration-300 ease-in-out"
               >
                 <div className="flex items-center justify-between">
                   About
@@ -271,7 +267,7 @@ const Navbar = () => {
 
               <li
                 onClick={() => handleDropdownToggle("links")}
-                className="flex cursor-pointer flex-col gap-4 p-4 transition-all duration-300 ease-in-out"
+                className="flex cursor-pointer flex-col gap-4 px-5 py-3 transition-all duration-300 ease-in-out"
               >
                 <div className="flex items-center justify-between">
                   Links

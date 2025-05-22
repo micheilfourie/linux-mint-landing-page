@@ -38,14 +38,14 @@ const Hero = () => {
       <div className="mx-auto flex max-w-[1200px] items-center justify-start gap-[30px] lg:px-10 px-6 pt-4 max-lg:mt-10">
         <div className="text-altwhite flex max-w-[450px] flex-col">
           <h6 className="font-poppins text-[15px] font-[500]">"Xia"</h6>
-          <h1 className="font-poppins text-[56px] font-[500]">
+          <h1 className="font-poppins lg:text-[56px] text-5xl mb-4 font-[500]">
             Linux Mint 22.1
           </h1>
           <p className="font-ubuntu text-[20px]">
             The latest version of the friendly operating system is here. Install
             it on your computer today!
           </p>
-          <div className="mt-6 flex gap-5">
+          <div className="mt-6 flex max-lg:flex-col lg:gap-5 gap-3">
             <Link to="/download">
               <Button>Download</Button>
             </Link>

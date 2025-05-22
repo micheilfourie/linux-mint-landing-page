@@ -2,8 +2,8 @@
 
 @theme {
   --color-primary-accent: oklch(0.74 0.1395 146.97);
-  --color-secondary-accent: oklch(0.7 0.1692 136.72);
-  --color-tertiary-accent: oklch(0.71 0.1201 178.09);
+  --color-secondary-accent: oklch(0.6991 0.1702 136.27);
+  --color-tertiary-accent: oklch(0.7088 0.1191 180.8);
 
   --color-altwhite: oklch(0.99 0 0);
   --color-altgray: oklch(0.96 0.0029 264.54);

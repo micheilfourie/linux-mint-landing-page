@@ -13,7 +13,7 @@ const PageHeader = ({ children }: { children: React.ReactNode}) => {
       <Header />
 
       <div className="mx-auto max-w-[1200px] px-10 pt-4">
-        <h1 className="font-poppins text-[56px] font-[600] text-altwhite">{children}</h1>
+        <h1 className="font-poppins lg:text-[56px] text-4xl font-[600] text-altwhite">{children}</h1>
       </div>
     </section>
   );
